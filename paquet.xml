@@ -1,13 +1,13 @@
 <paquet
 	prefix="sequoia"
 	categorie="squelette"
-	version="1.3.1"
+	version="0.1.0"
 	etat="test"
 	compatibilite="[3.0.0;3.0.*]"
 >	
 
 	<nom>Sequoia</nom>
-	<!-- Squelettes du projet Géodiversité -->
+	<!-- Squelettes de surcharge sur squelette géodiversité -->
 
 	<auteur lien="http://www.kent1.info" mail="kent1@arscenic.info">kent1</auteur>
 
