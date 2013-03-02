@@ -1,0 +1,65 @@
+<div class="contenu-principal">
+	[<div class="image_pop">
+		(#INCLURE{fond=inclure/sommaire_image_pop,largeur=500,hauteur=800})
+	</div>]
+
+	<div class="menu #EDIT{meta-descriptif_site}">
+		#DESCRIPTIF_SITE_SPIP
+	</div>
+	<BOUCLE_edito(ARTICLES){page=edito}{origine_traduction}>
+		<div class="menu">
+		<BOUCLE_edito_lang(ARTICLES){traduction}{lang=#ENV{lang}}>
+		<h2 class="h2 #EDIT{titre}">#TITRE</h2>
+			<div class="texte #EDIT{texte}">
+				[(#TEXTE|image_reduire{500,0})]
+			</div>
+		</BOUCLE_edito_lang>
+		</B_edito_lang>
+			<h2 class="h2 #EDIT{titre}">#TITRE</h2>
+			<div class="texte #EDIT{texte}">
+				[(#TEXTE|image_reduire{500,0})]
+			</div>
+		<//B_edito_lang>
+		</div>
+	</BOUCLE_edito>
+	
+	<ul class="triplette grid_12">
+		<li class="grid_4 alpha">
+			<h3 class="h3">La carte</h3>
+		</li>
+		<BOUCLE_rubriques(RUBRIQUES){id_rubrique != #CONFIG{geol/secteur_medias,1}}>
+		<li class="grid_4">
+			<h3 class="h3">#TITRE</h3>
+			<ul>
+				<BOUCLE_articles_rub(ARTICLES){origine_traduction}{id_rubrique}{par num titre,titre}>
+				<BOUCLE_articles_rub_lang(ARTICLES){traduction}{lang=#ENV{lang}}>
+				<li><a href="#URL_ARTICLE">#TITRE</a></li>
+				</BOUCLE_articles_rub_lang>
+				</B_articles_rub_lang>
+				<li><a href="#URL_ARTICLE">#TITRE</a></li>
+				<//B_articles_rub_lang>
+				</BOUCLE_articles_rub>
+			</ul>
+		</li>
+		</BOUCLE_rubriques>
+	</ul>
+	
+	<B_articles>
+	<div class="liste articles boites">
+		<h2 class="h2"><:geol:dernieres_contribs|majuscules:></h2>
+		<ul class="liste-items">
+			<BOUCLE_articles(ARTICLES) {!par date} {0,4}{id_secteur = #CONFIG{geol/secteur_medias,1}}>
+			<li class="item">
+				<BOUCLE_doc(DOCUMENTS){id_article}{mode=document}{vu=non}>
+				[<a href="#_articles:URL_ARTICLE" title="#_articles:TITRE">
+					(#LOGO_DOCUMENT|image_passe_partout{175,100}
+						|image_recadre{175,100,center}
+						|inserer_attribut{alt,[(#_articles:TITRE|couper{80}|texte_backend)]})
+				</a>]
+				</BOUCLE_doc>
+			</li>
+			</BOUCLE_articles>
+		</ul>
+	</div>
+	</B_articles>
+</div>
