@@ -1,0 +1,39 @@
+[(#REM) Fil d'Ariane ]
+<BOUCLE_txt(ARTICLES){page=contact}>
+<ol id="hierarchie">
+	<li class="on"><strong class="#EDIT{titre}">#TITRE</strong></li>
+</ol>
+
+<div class="contenu-principal">
+
+	
+	<div class="cartouche">
+		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
+	</div>
+	
+	[<div class="chapo #EDIT{texte}">(#TEXTE)</div>]
+	
+	<div class="formulaire_contact ajax">
+		#FORMULAIRE_CONTACT
+	</div>
+
+</div>
+
+</BOUCLE_txt>
+</B_txt>
+<ol id="hierarchie">
+	<li class="on"><strong><:sequoia:titre_contact:></strong></li>
+</ol>
+
+<div class="contenu-principal">
+	
+	<div class="cartouche">
+		<h1 class="h1"><:sequoia:titre_contact:></h1>
+	</div>
+	
+	<div class="formulaire_contact ajax">
+		#FORMULAIRE_CONTACT
+	</div>
+
+</div>
+<//B_txt>
