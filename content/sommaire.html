@@ -25,18 +25,27 @@
 	
 	<ul class="triplette grid_12">
 		<li class="grid_4 alpha">
-			<h3 class="h3">La carte</h3>
+			<BOUCLE_menu_carte(MENUS){identifiant=carte}>
+				[<h3 class="h3">(#TITRE|!={non}|?{#TITRE,''})</h3>]
+				[(#INCLURE{fond=inclure/menu,env,id_menu})]
+			</BOUCLE_menu_carte>
+			</B_menu_carte>
+			<h3 class="h3"><:sequoia:titre_carte:></h3>
+			<ul class="menu-liste">
+				<li class="menu-entree"><a href="#URL_PAGE{carte}" class="spip_in"><:sequoia:label_voir_carte:></a></li>
+			</ul>
+			<//B_menu_carte>
 		</li>
 		<BOUCLE_rubriques(RUBRIQUES){id_rubrique != #CONFIG{geol/secteur_medias,1}}>
 		<li class="grid_4">
 			<h3 class="h3">#TITRE</h3>
-			<ul>
+			<ul class="menu-liste">
 				<BOUCLE_articles_rub(ARTICLES){origine_traduction}{id_rubrique}{par num titre,titre}>
 				<BOUCLE_articles_rub_lang(ARTICLES){traduction}{lang=#ENV{lang}}>
-				<li><a href="#URL_ARTICLE">#TITRE</a></li>
+				<li class="menu-entree"><a href="#URL_ARTICLE">#TITRE</a></li>
 				</BOUCLE_articles_rub_lang>
 				</B_articles_rub_lang>
-				<li><a href="#URL_ARTICLE">#TITRE</a></li>
+				<li class="menu-entree"><a href="#URL_ARTICLE">#TITRE</a></li>
 				<//B_articles_rub_lang>
 				</BOUCLE_articles_rub>
 			</ul>

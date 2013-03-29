@@ -21,8 +21,19 @@
     margin-top: 15px;
     padding: 15px 0 0;
     width:100%;
+    margin-left:0;
 }
 
+.page_sommaire #contenu .triplette ul{
+	list-style-type:none;
+	margin-left:0;
+	padding-left:0;
+	border-bottom:none;
+}
+
+.triplette .alpha{
+	margin-left:0;
+}
 .container_12 .grid_4,.triplette .grid_4 {
     width: 31%;
 }
