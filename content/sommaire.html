@@ -26,7 +26,7 @@
 	<ul class="triplette grid_12">
 		<li class="grid_4 alpha">
 			<BOUCLE_menu_carte(MENUS){identifiant=carte}>
-				[<h3 class="h3">(#TITRE|!={non}|?{#TITRE,''})</h3>]
+				[<h3 class="h3 #EDIT{titre}">(#TITRE|!={non}|?{#TITRE,''})</h3>]
 				[(#INCLURE{fond=inclure/menu,env,id_menu})]
 			</BOUCLE_menu_carte>
 			</B_menu_carte>
@@ -38,7 +38,7 @@
 		</li>
 		<BOUCLE_rubriques(RUBRIQUES){id_rubrique != #CONFIG{geol/secteur_medias,1}}>
 		<li class="grid_4">
-			<h3 class="h3">#TITRE</h3>
+			<h3 class="h3 #EDIT{titre}">#TITRE</h3>
 			<ul class="menu-liste">
 				<BOUCLE_articles_rub(ARTICLES){origine_traduction}{id_rubrique}{par num titre,titre}>
 				<BOUCLE_articles_rub_lang(ARTICLES){traduction}{lang=#ENV{lang}}>
