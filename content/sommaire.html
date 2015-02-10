@@ -3,9 +3,9 @@
 		(#INCLURE{fond=inclure/sommaire_image_pop,largeur=500,hauteur=800})
 	</div>]
 
-	<div class="menu #EDIT{meta-descriptif_site}">
-		#DESCRIPTIF_SITE_SPIP
-	</div>
+	[<div class="menu #EDIT{meta-descriptif_site}">
+		(#DESCRIPTIF_SITE_SPIP)
+	</div>]
 	<BOUCLE_edito(ARTICLES){page=edito}{origine_traduction}>
 		<div class="menu">
 		<BOUCLE_edito_lang(ARTICLES){traduction}{lang=#ENV{lang}}>
@@ -22,6 +22,12 @@
 		<//B_edito_lang>
 		</div>
 	</BOUCLE_edito>
+	
+	<div class="partenaires">
+		[<a href="http://www.laurentine.net">(#CHEMIN{images/logo_laurentine.png}|balise_img)</a>]
+		[<a href="http://www.chateaudefaverolles.com/">(#CHEMIN{images/logo_faverolles.png}|balise_img)</a>]
+		[<a href="http://www.culturecommunication.gouv.fr/">(#CHEMIN{images/logo_culture.png}|balise_img)</a>]
+	</div>
 	
 	<ul class="triplette grid_12">
 		<li class="grid_4 alpha">

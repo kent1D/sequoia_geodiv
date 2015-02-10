@@ -75,3 +75,42 @@ div#hierarchie > a:first-child { background: #3e3e3e url(images/bg_ariane_black.
 }
 
 #nav .menu-liste {background: #3e3e3e url(images/bg_nav.png) left 50% no-repeat; }
+
+.documents_portfolio a:focus .spip_logos, .documents_portfolio a:hover .spip_logos, .documents_portfolio a:active .spip_logos{
+	border-color:#bf2c18;
+}
+
+.partenaires{
+	clear:right;
+	float:right;
+}
+.partenaires a{
+	display:inline-block;
+}
+
+#pied{
+	position:relative;
+	min-height:100px;
+}
+
+#pied .partenaires{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+
+
+#pied .partenaires img{
+	margin-right:10px;
+	height:80px;
+	width:auto;
+}
+
+@media (max-width: 959px){
+#nav .menu-liste .menu-entree:first-child{
+	margin-left:10px;
+}
+#nav .menu-liste .menu-entree a, #nav .menu-liste .menu-entree a:hover{
+	color:#fff;
+}
+}
