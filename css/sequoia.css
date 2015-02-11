@@ -83,6 +83,8 @@ div#hierarchie > a:first-child { background: #3e3e3e url(images/bg_ariane_black.
 .partenaires{
 	clear:right;
 	float:right;
+	width:46%;
+	text-align:center;
 }
 .partenaires a{
 	display:inline-block;
@@ -90,19 +92,20 @@ div#hierarchie > a:first-child { background: #3e3e3e url(images/bg_ariane_black.
 
 #pied{
 	position:relative;
-	min-height:100px;
+	min-height:80px;
 }
 
 #pied .partenaires{
 	position:absolute;
 	bottom:10px;
 	right:10px;
+	width:auto;
 }
 
 
 #pied .partenaires img{
 	margin-right:10px;
-	height:80px;
+	height:60px;
 	width:auto;
 }
 
